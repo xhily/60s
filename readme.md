@@ -8,7 +8,11 @@
 
 构建于现代技术栈 [Deno](https://deno.com/)，托管在 [Deno Deploy](https://deno.com/deploy)，同时支持 [Docker](https://docker.com)、[Cloudflare Workers](https://www.cloudflare.com/zh-cn/developer-platform/products/workers/)、[Bun](https://bun.sh/) 和 [Node.js](https://nodejs.org/) 等多种部署方式。
 
-## 🌍 看世界 · 每天60秒读懂世界
+## 🎯 项目起源
+
+本项目最早源于 [这篇文章](https://blog.viki.moe/60s) 中提到的想法。随着项目的发展，逐渐演变成一个多功能的开放 API 平台，旨在为开发者提供便捷的数据获取方式。
+
+## 🌍 读懂世界 · 每天 60 秒读懂世界
 
 本项目的 **核心功能**：获取每日精选新闻，让你快速了解世界大事。
 
@@ -23,10 +27,10 @@ curl "https://60s.viki.moe/v2/60s"
 # 纯文本格式
 curl "https://60s.viki.moe/v2/60s?encoding=text"
 
-# 原图直链 (重定向到微信公众号原图)
+# 原图直链 (重定向到数据仓库原图直链)
 curl "https://60s.viki.moe/v2/60s?encoding=image" --location --output "$(date +%Y-%m-%d).png"
 
-# 代理直链 (代理请求，绕过防盗链)
+# 代理直链 (代理请求，直接返回图片二进制数据)
 curl "https://60s.viki.moe/v2/60s?encoding=image-proxy" --output "$(date +%Y-%m-%d).png"
 ```
 
@@ -138,10 +142,6 @@ npm install && npx wrangler publish
 - **GitHub**: [Issues](https://github.com/vikiboss/60s/issues) (Bug 报告、功能建议)
 - **文档**: [API 文档](https://docs.60s-api.viki.moe) (详细使用说明)
 
-### 🎯 项目起源
-
-本项目最早源于 [这篇文章](https://xlog.viki.moe/60s) 中提到的想法。
-
 ### 📈 项目 Star 历史
 
 [![Star History Chart](https://api.star-history.com/svg?repos=vikiboss/60s&type=Date)](https://star-history.com/#vikiboss/60s&Date)
@@ -187,6 +187,7 @@ npm install && npx wrangler publish
 |             *斌             | 12.90  | Alipay |                   -                    |
 |             *杰             | 20.00  | Alipay |                   -                    |
 |            **杰             |  9.90  | Alipay |                   -                    |
+|             *瑞             | 666.66 | Alipay |               100 杯咖啡               |
 |             ---             |  ---   |  ---   |                  ---                   |
 |             Ko.             | 11.66  |   QQ   |                   -                    |
 |           yijiong           | 15.00  |   QQ   |            a cup of coffee             |
